@@ -1,0 +1,18 @@
+---
+applications:
+- name: java-sample
+  memory: 512M
+  instances: 1
+  host: java-sample
+  path: lib/java-sample.war
+  buildpack: java_buildpack
+  services:
+   - mysql-service-instance
+   - mongodb-service-instance
+   - cubrid-service-instance
+   - redis-service-instance
+   - rabbitmq-service-instance
+   - glusterfs-service-instance
+   
+  env:
+   SPRING_PROFILES_ACTIVE: cloud

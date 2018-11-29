@@ -1,0 +1,8 @@
+---
+applications:
+- name: php-sample-app
+  memory: 128M
+  instances: 1
+  host: php-sample-app
+  path: .
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git

@@ -1,0 +1,200 @@
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<!-- Jquery -->
+
+	<script src="../resources/assets/jquery/jquery-2.1.4.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../resources/assets/bootstrap/css/bootstrap.min.css" />
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+	<script src="../resources/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+	<link rel="stylesheet" type="text/css" href="../resources/css/sample-style.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css">
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="../resources/js/js.cookie.js"></script>
+	<script src="../resources/js/jsviews.js"></script>
+	<script src="../resources/js/common.js"></script>
+	<script src="../resources/js/sample-js.js"></script>
+
+
+
+	<!-- <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+	<title>Organization View</title>
+</head>
+<body>
+	<script id="bigTreeTemplate" type="text/x-jsrender">
+	<div id={% raw %}"{{:id}}"{% endraw %} class="box-tree row delete-padding-both">
+		<a href={% raw %}"{{:url}}"{% endraw %} target="_blank">
+			<div class="col-xs-4 delete-padding-both">
+			{% raw %}
+			{{if thumb_img_path && thumb_img_path != ''}}{% endraw %}
+				<img src={% raw %}"{{:thumb_img_path}}"{% endraw %} alt={% raw %}"{{:thumb_img_name}}"{% endraw %} height="70" width="70"/>
+			{% raw %}{{else}}{% endraw %}
+				<i class="card-sumnail fa fa-user fa-4x" style="margin-top:10px; margin-left:15px;"></i>
+			{% raw %}{{/if}}{% endraw %}
+			</div>
+			<div class="border-line col-xs-8 delete-padding-both">
+				<div class="card-title card-tree-margin-top"> {% raw %}{{:label}}{% endraw %}</div>
+				<div class="card-detail-description card-tree-margin-top"> {% raw %}{{:desc}}{% endraw %}</div>
+			</div>
+		</a>
+	</div>
+	</script>
+
+	<!-- 트리 작은 아이템 템플릿 -->
+	<script id="smallTreeTemplate" type="text/x-jsrender">
+	<div id={% raw %}"{{:id}}"{% endraw %} class="box-small-tree delete-padding-both">
+		<a href ={% raw %}"{{:url}}"{% endraw %} target="_blank">
+
+
+			<div class="delete-padding-both">
+				{% raw %}
+				{{if thumb_img_path && thumb_img_path != ''}}{% endraw %}
+					<img src={% raw %}"{{:thumb_img_path}}"{% endraw %} alt={% raw %}"{{:thumb_img_name}}"{% endraw %} height="70" width="70" />
+				{% raw %}{{else}}{% endraw %}
+					<i class="card-sumnail fa fa-user fa-4x" style="margin-top:10px; margin-left:15px;"></i>
+				{% raw %}{{/if}}{% endraw %}
+			</div>
+			<div class="delete-padding-both">
+				<div class="card-title-small card-tree-margin-top" style="text-align:center; font-size:13px;"> {% raw %}{{:label}}{% endraw %}</div>
+			</div>
+		</a>
+	</div>
+	</script>
+
+	<script id="NoData">
+	</script> 
+
+	<nav class="navbar nav-default navbar-static-top">
+		<div class="container ">
+			<div class = "row">
+				<div class="navbar-header col-xs-4">
+					<a class="navbar-brand font-color-white">
+						<span>Python - 조직도</span> <small>애플리케이션</small>
+					</a>
+				</div>
+				<div class="col-xs-8 header-right">
+				 <button class="nav navbar-nav navbar-right ">
+
+						<a id="org-manager">
+							<i class="fa fa-cog fa-2x fa-vertical-align" style=" " ></i> <span id ="org-manager-btn">조직 관리</span>
+						</a>
+
+				 </button>
+
+
+					<select id="dbType" class="form-control dbType pull-right" disabled>
+	          <option value="mysql">Mysql</option>
+	          <option value="cubrid">Cubrid</option>
+	          <option value="mongo">Mongo DB</option>
+	        </select>
+		    </div>
+		  </div>
+   	</div>
+	</nav>
+
+	<div class="page-header container">
+		<div class="row">
+			<div class="col-xs-8">
+				<h1><span class="title_org"></span> <small>- 각 조직을 클릭하여 조직의 홈페이지로 이동 할 수 있습니다.</small>
+
+				</h1>
+			</div>
+
+
+			<div class="col-xs-4 btn-group margin-top-30"  role="group" aria-label="...">
+			  <button type="button" class="active tab title-tab tab btn btn-default">카드</button>
+			  <button type="button" class="tab btn title-tab btn-default">탭+카드</button>
+			  <button type="button" class="tab btn title-tab btn-default">트리</button>
+			  <button type="button" class="tab btn title-tab btn-default">탭+트리</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="body-content">
+		<div class="container padding-content">
+
+			<!-- 카드 -->
+			<div class ="tab-container" id="tab_1">
+
+			</div>
+
+			<!-- 탭+카드 -->
+			<div class ="tab-container" id="tab_2">
+
+				<div class="row btn-group inner-btn-group"  role="group" >
+
+				</div>
+
+				<!-- 카드 -->
+				<div id="tab_2_card_group">
+
+
+				</div>
+			</div>
+			<!-- 트리 -->
+			<div class ="tab-container" id="tab_3">
+
+				<!-- <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['orgchart']}]}"></script> -->
+				<!--<script type="text/javascript" src="../resources/js/google-tree.js"></script>-->
+       <div id="chart_div"></div>
+
+		  </div>
+
+
+
+
+			<!-- 탭+트리 -->
+			<div class ="tab-container" id="tab_4">
+				<div class="row btn-group inner-btn-group"  role="group" >
+
+				</div>
+
+				<!-- 카드 -->
+				<div id="chart_div_group">
+
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">조직도 변경 알림</h4>
+      </div>
+      <div class="modal-body">
+        <div id = "modal-body-content"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-primary" id="modal-refresh">새로 고침</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

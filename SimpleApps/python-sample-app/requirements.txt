@@ -1,0 +1,12 @@
+Django==1.8.6
+djangorestframework==3.3.1
+gunicorn==19.1.1
+WhiteNoise==2.0.4
+pika==0.10.0
+pymongo==2.8
+jinja2==2.8
+django-redis-cache==1.6.4
+python-keystoneclient==2.0.0
+python-swiftclient==2.6.0
+CUBRID-Python==9.3.0.0001
+MySQL-python==1.2.3

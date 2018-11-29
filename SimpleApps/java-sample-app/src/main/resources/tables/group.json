@@ -1,0 +1,314 @@
+[
+    {
+        "label": "대통령",
+        "superior": "",
+        "depth": 10,
+        "url" : "http://www.president.go.kr/"
+    },
+    {
+        "label": "대통령비서실",
+        "superior": "대통령",
+        "depth": 10,
+        "url" : "http://www.president.go.kr/"
+    },
+    {
+        "label": "국가안보실",
+        "superior": "대통령",
+        "depth": 10,
+        "url" : "http://www.president.go.kr/"
+    },
+    {
+        "label": "대통령경호실",
+        "superior": "대통령",
+        "depth": 10,
+        "url" : "https://www.facebook.com/pages/%EB%8C%80%ED%86%B5%EB%A0%B9%EA%B2%BD%ED%98%B8%EC%8B%A4/401816969947132"
+    },
+    {
+        "label": "국가정보원",
+        "superior": "대통령",
+        "depth": 20,
+        "url" : "http://www.nis.go.kr/"
+    },
+    {
+        "label": "감사원",
+        "superior": "대통령",
+        "depth": 20,
+        "url" : "http://www.bai.go.kr/"
+    },
+    {
+        "label": "방송통신위원회",
+        "superior": "대통령",
+        "depth": 20,
+        "url" : "http://www.kcc.go.kr/"
+    },
+    {
+        "label": "국무총리",
+        "superior": "대통령",
+        "depth": 30,
+        "url" : "http://www.pmo.go.kr/"
+    },
+    {
+        "label": "국무조정실",
+        "superior": "국무총리",
+        "depth": 10,
+        "url" : "http://www.pmo.go.kr/"
+    },
+    {
+        "label": "국무총리비서실",
+        "superior": "국무총리",
+        "depth": 10,
+        "url" : "http://www.pmo.go.kr/"
+    },
+    {
+        "label": "국민안전처",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.mpss.go.kr/"
+    },
+    {
+        "label": "인사혁신처",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.mpm.go.kr/"
+    },
+    {
+        "label": "법제처",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.moleg.go.kr/"
+    },
+    {
+        "label": "국가보훈처",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.mpva.go.kr/"
+    },
+    {
+        "label": "식품의약품안전처",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.mfds.go.kr/"
+    },
+    {
+        "label": "공정거래위원회",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.ftc.go.kr/"
+    },
+    {
+        "label": "금융위원회",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://fsc.go.kr/"
+    },
+    {
+        "label": "국민권익위원회",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.acrc.go.kr/"
+    },
+    {
+        "label": "원자력안전위원회",
+        "superior": "국무총리",
+        "depth": 20,
+        "url" : "http://www.nssc.go.kr/"
+    },
+    {
+        "label": "기획재정부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mosf.go.kr/"
+    },
+    {
+        "label": "교육부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.moe.go.kr/"
+    },
+    {
+        "label": "미래창조과학부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.msip.go.kr/"
+    },
+    {
+        "label": "외교부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mofa.go.kr/"
+    },
+    {
+        "label": "통일부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.unikorea.go.kr/"
+    },
+    {
+        "label": "법무부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.moj.go.kr/"
+    },
+    {
+        "label": "국방부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mnd.go.kr/"
+    },
+    {
+        "label": "행정자치부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mogaha.go.kr/"
+    },
+    {
+        "label": "문화체육관광부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mcst.go.kr/"
+    },
+    {
+        "label": "농림축산식품부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mafra.go.kr/"
+    },
+    {
+        "label": "산업통상자원부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.motie.go.kr/"
+    },
+    {
+        "label": "보건복지부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mw.go.kr/"
+    },
+    {
+        "label": "환경부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.me.go.kr/"
+    },
+    {
+        "label": "고용노동부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.moel.go.kr/"
+    },
+    {
+        "label": "여성가족부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mogef.go.kr/"
+    },
+    {
+        "label": "국토교통부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.molit.go.kr/"
+    },
+    {
+        "label": "해양수산부",
+        "superior": "국무총리",
+        "depth": 30,
+        "url" : "http://www.mof.go.kr/"
+    },
+    {
+        "label": "국세청",
+        "superior": "기획재정부",
+        "depth": 10,
+        "url" : "http://www.nts.go.kr/"
+    },
+    {
+        "label": "관세청",
+        "superior": "기획재정부",
+        "depth": 10,
+        "url" : "http://www.customs.go.kr/"
+    },
+    {
+        "label": "조달청",
+        "superior": "기획재정부",
+        "depth": 10,
+        "url" : "http://www.pps.go.kr/"
+    },
+    {
+        "label": "통계청",
+        "superior": "기획재정부",
+        "depth": 10,
+        "url" : "http://kostat.go.kr/"
+    },
+    {
+        "label": "검찰청",
+        "superior": "법무부",
+        "depth": 10,
+        "url" : "http://www.spo.go.kr/"
+    },
+    {
+        "label": "병무청",
+        "superior": "국방부",
+        "depth": 10,
+        "url" : "http://www.mma.go.kr/"
+    },
+    {
+        "label": "방위사업청",
+        "superior": "국방부",
+        "depth": 10,
+        "url" : "http://www.dapa.go.kr/"
+    },
+    {
+        "label": "경찰청",
+        "superior": "행정자치부",
+        "depth": 10,
+        "url" : "http://www.police.go.kr/"
+    },
+    {
+        "label": "문화재청",
+        "superior": "문화체육관광부",
+        "depth": 10,
+        "url" : "http://www.cha.go.kr/"
+    },
+    {
+        "label": "농촌진흥청",
+        "superior": "농림축산식품부",
+        "depth": 10,
+        "url" : "http://www.rda.go.kr/"
+    },
+    {
+        "label": "산림청",
+        "superior": "농림축산식품부",
+        "depth": 10,
+        "url" : "http://www.forest.go.kr/"
+    },
+    {
+        "label": "중소기업청",
+        "superior": "산업통상자원부",
+        "depth": 10,
+        "url" : "http://smba.go.kr/"
+    },
+    {
+        "label": "특허청",
+        "superior": "산업통상자원부",
+        "depth": 10,
+        "url" : "http://www.kipo.go.kr/"
+    },
+    {
+        "label": "기상청",
+        "superior": "환경부",
+        "depth": 10,
+        "url" : "http://www.kma.go.kr/"
+    },
+    {
+        "label": "행정중심복합도시건설청",
+        "superior": "국토교통부",
+        "depth": 10,
+        "url" : "http://www.macc.go.kr/"
+    },
+    {
+        "label": "새만금개발청",
+        "superior": "국토교통부",
+        "depth": 10,
+        "url" : "http://www.saemangeum.go.kr/"
+    }
+]
